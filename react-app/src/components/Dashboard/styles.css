@@ -3,24 +3,47 @@
   flex-direction: column;
 }
 .search-bar {
-    background-color: blue;
     display: flex;
     align-items: center;
-    
 }
 
 .text-input {
-    margin-left: 65px;
+    margin-left: 10px;
     width: 350px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: -1px 6px 36px 9px rgba(0,0,0,0.24);
+    background-color: var(--color-background);
+    color: var(--color-text);
+
 }
 
 .continent-selector {
-    background-color: blueviolet;
+    margin-right: 65px;
+}
+
+.selector {
+    height: 40px;
+    width: 150px;
+    box-shadow: -1px 6px 36px 9px rgba(0,0,0,0.24);
+    background-color: var(--color-background);
+    color: var(--color-text);
 }
 
 .search-and-filter {
     display: flex;
     align-items: center;
     width: 100%;
-    background-color: brown;
+    height: 100px;
+    justify-content: space-between;
+
+}
+
+.lupa-search {
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+    align-items: center;
+    justify-content: center; 
 }

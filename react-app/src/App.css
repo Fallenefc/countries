@@ -1,3 +1,27 @@
 body, html {
-  background-color: hsl(0, 0%, 98%);
+  background-color: var(--color-background);
+  color: var(--color-text)
 }
+
+:root {
+	--color-dark-gray: hsl(0, 0%, 52%);
+  --color-light-gray: hsl(0, 0%, 98%);
+
+  --color-dark-blue-elements: hsl(209, 23%, 22%);
+	--color-dark-blue-background: hsl(207, 26%, 17%);
+  --color-dark-blue-light-text:hsl(200, 15%, 8%);
+
+  /* Light Mode */
+  --color-background: var(--color-light-gray);
+  --color-text: var(--color-dark-blue-light-text);
+
+  /* This is not changed */
+  --color-white: hsl(0, 0%, 100%);
+}
+
+/* - Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+- Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+- Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+- Dark Gray (Light Mode Input): 
+- Very Light Gray (Light Mode Background): 
+- White (Dark Mode Text & Light Mode Elements):  */

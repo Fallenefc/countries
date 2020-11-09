@@ -7,20 +7,35 @@ import { getCountries } from './services/ApiService'
 function App() {
 
   const [countries, setCountries] = useState(null);
-  // const [cache, setCache] = useState({});
+  const [cache, setCache] = useState({});
   
   useEffect(() => {
     getCountries().then(data => {
       setCountries(data);
+      setCache(data);
     })
-    // setCache(data);
   }, [])
+
+  const searchBarInput = (input) => {
+    const filteredList = cache.filter(el => el.name.toLowerCase().includes(input.toLowerCase()));
+    setCountries(filteredList);
+  }
+
+  const selectInput = (value) => {
+    if (value === 'all') {
+      setCountries(cache);
+    }
+    else {
+      const filteredList = cache.filter(el => el.region.toLowerCase().includes(value.toLowerCase()));
+      setCountries(filteredList);
+    }
+  }
 
   return (
     <div className="App">
       <header className="App-header">
         <Header />
-        <Dashboard countries={countries}/>
+        <Dashboard countries={countries} searchBarInput={searchBarInput} selectInput={selectInput}/>
       </header>
     </div>
   );

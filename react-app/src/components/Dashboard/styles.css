@@ -1,0 +1,26 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+}
+.search-bar {
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    
+}
+
+.text-input {
+    margin-left: 65px;
+    width: 350px;
+}
+
+.continent-selector {
+    background-color: blueviolet;
+}
+
+.search-and-filter {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: brown;
+}

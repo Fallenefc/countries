@@ -2,9 +2,9 @@ import React from 'react'
 
 function CountryCard({name, population, region, capital, flag}) {
   return (
-    <div>
+    <div className = 'country-card'>
       <div className='flag'>
-        <img src={flag}></img>
+        <img src={flag} width = '270px' height = '180px'></img>
       </div>
       <div className='card-info'>
         <h2>{name}</h2>

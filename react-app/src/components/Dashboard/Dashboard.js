@@ -24,6 +24,7 @@ function Dashboard({ countries, searchBarInput, selectInput }) {
           </select>
         </div>
       </div>
+      <div className = 'country-list'>
       {countries
         ? countries.map((country, index) => {
             return (
@@ -39,6 +40,7 @@ function Dashboard({ countries, searchBarInput, selectInput }) {
             );
           })
         : "Loading"}
+        </div>
     </div>
   );
 }

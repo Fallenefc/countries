@@ -9,14 +9,15 @@
 
 .text-input {
     margin-left: 10px;
-    width: 350px;
+    width: 320px;
     height: 40px;
     border: none;
     border-radius: 4px;
-    box-shadow: -1px 6px 36px 9px rgba(0,0,0,0.24);
+    box-shadow: 0px 0px 6px 0px hsl(0, 0%, 80%);
     background-color: var(--color-background);
     color: var(--color-text);
-
+    outline: none;
+    padding-left: 30px;
 }
 
 .continent-selector {
@@ -26,9 +27,12 @@
 .selector {
     height: 40px;
     width: 150px;
-    box-shadow: -1px 6px 36px 9px rgba(0,0,0,0.24);
+    box-shadow: 0px 0px 6px 0px hsl(0, 0%, 80%);
     background-color: var(--color-background);
     color: var(--color-text);
+    border: none;
+    border-radius: 4px;
+    outline: none;
 }
 
 .search-and-filter {
@@ -46,4 +50,42 @@
     margin-left: 60px;
     align-items: center;
     justify-content: center; 
+}
+
+.country-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px 35px 35px 35px;
+}
+
+.country-card {
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    height: 350px;
+    background-color: var(--color-background);
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px 0px hsl(0, 0%, 80%);
+
+}
+
+.flag img{
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+    object-fit: fill;
+}
+
+
+.card-info h4{
+    font-weight: 300;
+    line-height: 3px;
+}
+
+.card-info h4 span{
+    font-weight: 600;
+}
+
+.card-info {
+    padding-left: 20px;
 }

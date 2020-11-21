@@ -1,0 +1,36 @@
+.country-page-container {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.back-button-container {
+  margin-bottom: 50px;
+}
+
+.info-container {
+  display: flex;
+  width: 100%;
+}
+
+.country-info {
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.country-other-info {
+  display: flex;
+}
+
+.left-side-info {
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-side-info {
+  display: flex;
+  flex-direction: column;
+}

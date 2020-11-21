@@ -4,13 +4,15 @@ import Dashboard from './components/Dashboard/Dashboard'
 import { useState, useEffect } from 'react';
 import { getCountries } from './services/ApiService'
 import CountryPage from './components/CountryPage/CountryPage';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+import Loader from 'react-loader-spinner';
 
 function App() {
 
   const [countries, setCountries] = useState(null);
   const [cache, setCache] = useState({});
-  const [country, setCountry] = useState(true);
-  
+  const [country, setCountry] = useState(null);
+
   useEffect(() => {
     getCountries().then(data => {
       setCountries(data);
@@ -46,7 +48,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Header />
-        {countries ? country ? <CountryPage country={country} handleBack={handleBack}/> : <Dashboard countries={countries} searchBarInput={searchBarInput} selectInput={selectInput} handleCountryPage={handleCountryPage}/> : <div>Loading...</div>}
+        {countries ? country ? <CountryPage country={country} handleBack={handleBack} /> : <Dashboard countries={countries} searchBarInput={searchBarInput} selectInput={selectInput} handleCountryPage={handleCountryPage} /> : <div className='loader'> <Loader
+          type="Audio"
+          color="red"
+          height={200}
+          width={200}
+          timeout={3000} //3 secs
+        /> </div>}
       </header>
     </div>
   );

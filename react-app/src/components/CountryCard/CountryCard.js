@@ -1,4 +1,5 @@
 import React from 'react'
+import './styles.css'
 
 function CountryCard({name, population, region, capital, flag}) {
   return (

@@ -3,7 +3,7 @@ import CountryCard from "../CountryCard/CountryCard";
 import SearchBar from "../SearchBar/SearchBar";
 import "./styles.css";
 
-function Dashboard({ countries, searchBarInput, selectInput }) {
+function Dashboard({ countries, searchBarInput, selectInput, handleCountryPage }) {
   return (
     <div className="dashboard-container">
       <div className="search-and-filter">
@@ -28,8 +28,9 @@ function Dashboard({ countries, searchBarInput, selectInput }) {
       {countries
         ? countries.map((country, index) => {
             return (
-              <div className="country-list" key={index}>
+              <div className="country-list" key={index} onClick={() => handleCountryPage(index)}>
                 <CountryCard
+                  index={index}
                   name={country.name}
                   flag={country.flag}
                   population={country.population}

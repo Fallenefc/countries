@@ -14,14 +14,35 @@
 }
 
 .country-info {
-  margin-left: 100px;
+  width: 800px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin-left: 100px;
+  
+}
+
+.country-name {
+  font-weight: bold;
+  font-size: 35px;
 }
 
 .country-other-info {
   display: flex;
+  flex-direction: row;
+  height: 200px;
+  
+}
+
+.country-other-info span {
+  width: 250px;
+  line-height: 2;
+  
+}
+.country-other-info p {
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .left-side-info {
@@ -33,4 +54,23 @@
 .right-side-info {
   display: flex;
   flex-direction: column;
+}
+.back-button-container button {
+  width: 100px;
+  height: 35px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 6px 0px hsl(0, 0%, 80%);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.back-button-container button i{
+  padding-right: 5px;
+}
+
+.flag-container img{
+  box-shadow: 0px 0px 6px 0px hsl(0, 0%, 80%);
 }

@@ -6,7 +6,7 @@ function CountryPage({ handleBack, country }) {
   return (
     <div className='country-page-container'>
       <div className='back-button-container'>
-        <button onClick={handleBack}>back</button>
+        <button onClick={handleBack}><i class="fas fa-arrow-left"></i> Back</button>
       </div>
       <div className='info-container'>
         <div className='flag-container'>
@@ -16,19 +16,19 @@ function CountryPage({ handleBack, country }) {
           <div className='country-name'>{country.name}</div>
           <div className='country-other-info'>
             <div className='left-side-info'>  
-              <span>Native Name: {country.nativeName}</span>  
-              <span>Population: {country.population}</span>
-              <span>Region: {country.region}</span>
-              <span>Sub-region: {country.subregion}</span>
-              <span>Capital: {country.capital}</span>
+              <span><strong>Native Name:</strong> {country.nativeName}</span>  
+              <span><strong>Population: </strong>{country.population}</span>
+              <span><strong>Region: </strong>{country.region}</span>
+              <span><strong>Sub-region: </strong>{country.subregion}</span>
+              <span><strong>Capital: </strong>{country.capital}</span>
             </div>
             <div className='right-side-info'>
-              <span>Top Level Domain: {country.topLevelDomain[0]}</span>
-              <span>Currency: {country.currency}</span>
-              <span>Languages: {country.languages.map((language, index) => <span key={index}>{language.name}{" "}</span>)}</span>
+              <span><strong>Top Level Domain: </strong>{country.topLevelDomain[0]}</span>
+              <span><strong>Currency: </strong>{country.currency}</span>
+              <span><strong>Languages: </strong>{country.languages.map((language, index) => <span key={index}>{language.name}{" "}</span>)}</span>
             </div>
           </div>
-          <div className='country-borders'>Border Countries: {country.borders.length > 1 ? country.borders.map((border, index) => <span key={index}>{border}{" "}</span>) : "None"}</div>
+          <div className='country-borders'><strong>Border Countries:</strong> {country.borders.length > 1 ? country.borders.map((border, index) => <span key={index}>{border}{" "}</span>) : "None"}</div>
         </div>
       </div>
     </div>

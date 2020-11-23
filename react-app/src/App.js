@@ -40,15 +40,17 @@ function App() {
     setCountry(null);
   }
 
-  const handleCountryPage = (index) => {
-    setCountry(countries[index]);
+  const handleCountryPage = (alpha3Code) => {
+    let filteredArr = [...cache];
+    filteredArr = cache.filter((country) => country.alpha3Code === alpha3Code);
+    setCountry(filteredArr[0]);
   }
 
   return (
     <div className="App">
       <header className="App-header">
         <Header />
-        {countries ? country ? <CountryPage country={country} handleBack={handleBack} /> : <Dashboard countries={countries} searchBarInput={searchBarInput} selectInput={selectInput} handleCountryPage={handleCountryPage} /> : <div className='loader'> <Loader
+        {countries ? country ? <CountryPage country={country} handleBack={handleBack} handleCountryPage={handleCountryPage} /> : <Dashboard countries={countries} searchBarInput={searchBarInput} selectInput={selectInput} handleCountryPage={handleCountryPage} /> : <div className='loader'> <Loader
           type="Audio"
           color="red"
           height={200}

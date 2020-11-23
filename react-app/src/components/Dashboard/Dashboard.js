@@ -28,12 +28,13 @@ function Dashboard({ countries, searchBarInput, selectInput, handleCountryPage }
       {countries
         ? countries.map((country, index) => {
             return (
-              <div className="country-list" key={index} onClick={() => handleCountryPage(index)}>
+              <div className="country-list" key={index} onClick={() => handleCountryPage(country.alpha3Code)}>
                 <CountryCard
+                  
                   index={index}
                   name={country.name}
                   flag={country.flag}
-                  population={country.population}
+                  population={country.population.toLocaleString()}
                   region={country.region}
                   capital={country.capital}
                 />

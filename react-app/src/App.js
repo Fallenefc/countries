@@ -38,6 +38,7 @@ function App() {
 
   const handleBack = () => {
     setCountry(null);
+    setCountries(cache);
   }
 
   const handleCountryPage = (alpha3Code) => {
